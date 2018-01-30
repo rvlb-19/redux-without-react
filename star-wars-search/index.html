@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Redux Star Wars API example</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <input name="search-input" type="search">
+        <button id="search-button">Procurar</button>
+      </div>
+      <div>
+        A última busca foi: <span id="last-search"></span>
+      </div>
+      <div>
+        <ul id="list"></ul>
+      </div>
+    </div>
+    <!-- Imports externos -->
+    <script src="https://unpkg.com/axios@latest/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/redux-thunk@latest/dist/redux-thunk.min.js"></script>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <!-- Imports para configurar o Redux na aplicação -->
+    <script src="redux-config/action_types.js"></script>
+    <script src="redux-config/actions.js"></script>
+    <script src="redux-config/api.js"></script>
+    <script src="redux-config/action_creators.js"></script>
+    <script src="redux-config/reducers.js"></script>
+    <script src="redux-config/store.js"></script>
+    <!-- Imports gerais da aplicação -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
