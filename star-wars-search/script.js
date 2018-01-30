@@ -6,10 +6,10 @@ $(document).ready(() => {
   const renderList = () => {
     const list = $('#list');
     list.html('');
-    store.getState().characters.forEach((item, id) => {
+    store.getState().characters.forEach((character, id) => {
       list.append(`
         <li>
-          ${item} <button class="remove-character" key=${id}>Remover</button>
+          ${character.name} <button class="remove-character" key=${id}>Remover</button>
         </li>
       `);
     });

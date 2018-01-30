@@ -1,5 +1,8 @@
 const reducer = Redux.combineReducers({ characters, lastSearch });
-const store = Redux.createStore(reducer);
+const enhancer = Redux.applyMiddleware(ReduxThunk.default);
+
+const store = Redux.createStore(reducer, enhancer);
+
 store.subscribe(() => {
   console.log(store.getState());
 });
