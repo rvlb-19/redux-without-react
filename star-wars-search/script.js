@@ -21,13 +21,16 @@ $(document).ready(() => {
   $('#search-button').click(e => {
     e.preventDefault();
     const input = $('input[name=search-input]');
-    triggerSearch(input.val());
+    const name = input.val();
     input.val('');
+    
+    addCharacter(name);
+    updateLastSearch(name);
   });
 });
 
 $(document).on('click', '.remove-character', e => {
     e.preventDefault();
     const id = $(e.target).attr('key');
-    triggerRemoveCharacter(id);
+    removeCharacter(id);
 });
