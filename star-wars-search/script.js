@@ -24,13 +24,13 @@ $(document).ready(() => {
     const name = input.val();
     input.val('');
     
-    addCharacter(name);
-    updateLastSearch(name);
+    store.dispatch(addCharacter(name));
+    store.dispatch(updateLastSearch(name));
   });
 });
 
 $(document).on('click', '.remove-character', e => {
     e.preventDefault();
     const id = $(e.target).attr('key');
-    removeCharacter(id);
+    store.dispatch(removeCharacter(id));
 });

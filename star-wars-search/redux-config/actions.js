@@ -4,14 +4,12 @@ const actionTypes = {
   SEARCH: 'SEARCH',
 };
 
-const addCharacter = term => store.dispatch(
-  (dispatch, getState, { api }) => (
-    api.searchCharacter(term)
-      .then(response => dispatch({ type: actionTypes.ADD_CHARACTER, payload: response.data })
-    )
+const addCharacter = term => (dispatch, getState, { api }) => (
+  api.searchCharacter(term)
+    .then(response => dispatch({ type: actionTypes.ADD_CHARACTER, payload: response.data })
   )
 );
 
-const removeCharacter = id => store.dispatch({ type: actionTypes.REMOVE_CHARACTER, id });
+const removeCharacter = id => ({ type: actionTypes.REMOVE_CHARACTER, id });
 
-const updateLastSearch = term => store.dispatch({ type: actionTypes.SEARCH, payload: term });
+const updateLastSearch = term => ({ type: actionTypes.SEARCH, payload: term });
